@@ -1,0 +1,47 @@
+{% extends 'item/base.html' %}
+{% load static %}
+{% block ex %}
+<style>
+        section.process__heading:before{
+            background: url("{{ process.main_image.url }}") no-repeat center;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <section class="process__heading">
+        <div class="cnst__wrapper__main">
+            <div class="success__content__wrapper">
+                <div class="success__header">
+                    <span class="process__banner__top__text">We Belive</span>
+                    <h1>{{ process.title }}</h1>
+                    <div class="success__heading__text">
+                        <p>{{ process.description }}</p>
+                        <!-- <p>At every point along the way, we’re focused on safety, attentive to evolving on-site needs, and dedicated to a stunning end result. Learn more about each step in our process.</p> -->
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="process__steps__holder">
+        <div class="cnst__wrapper__main">
+            <div class="success__content__wrapper">
+                {% for process_down in process_down %}
+                <div class="process__steps__list">
+                    <div class="process__text__box">
+                        <div class="process__step__index">{{ forloop.counter }}</div>
+                        <h2>{{ process_down.title|linebreaks }}</h2>
+                        <div class="process__step__body">{{ process_down.description|linebreaks }}</div>
+                    </div>
+                    <div class="process__step__image">
+                        <img src="{{ process_down.image.url }}" alt="">
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}

@@ -1,0 +1,126 @@
+{% extends 'item/base.html' %}
+{% load static %}
+{% block content %}
+<section class="projects__showcase">
+        <div class="cnst__wrapper__main">
+        	<div class="projects__shows">
+	        	<div class="projects__nav__links">
+	        		<div class="projects__nav">
+	                    <ul>
+                            {% for item in project %}
+                                {% if forloop.counter == 1 %}
+                                    <li class="active">
+                                        <a c_id="{{ item.id }}" class="show">{{ forloop.counter }}</a>
+                                    </li>
+                                {% else %}
+                                    <li>
+                                        <a c_id="{{ item.id }}" class="show">{{ forloop.counter }}</a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+	                    </ul>
+	                </div>
+                </div>
+                {% for item in project %}
+                {% if forloop.counter == 1 %}
+	        	<div id="{{ item.id }}" class="project__right">
+		            <div class="projects__cont">
+                        <div class="projects__left">
+                            <div class="project__desc">
+                                <div class="project__desc__holder">
+                                <h1>{{ item.title|linebreaks }}</h1>
+                                <div class="project__desc__text">
+                                    <p>{{ item.description|linebreaks  }}</p>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects__image__slide">
+                            <div class="projects__imgs__slide owl-carousel owl-theme">
+                                {% for image in item.images.all %}
+                                <div class="item">
+                                    <img src="{{ image.image.url }}" alt="">
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+		            </div>
+		            <div class="projects__tags__container">
+		            <ul class="project__tags">
+		                <li class="project__tag" style="">
+		                  <div class="project__tag__name">Client</div>
+		                  <div class="project__tag__value">{{ item.client_name }}</div>
+		                </li>
+		                <li class="project__tag" style="">
+		                  <div class="project__tag__name">Industry</div>
+		                  <div class="project__tag__value">{{ item.location }}</div>
+		                </li>
+		                <li class="project__tag" style="">
+		                  <div class="project__tag__name">Sector</div>
+		                  <div class="project__tag__value">{{ item.sector }}</div>
+		                </li>
+		            </ul>
+		            </div>
+                </div>
+                {% else %}
+                <div id="{{ item.id }}" class="project__right" style="display:none">
+                        <div class="projects__cont">
+                            <div class="projects__left">
+                                <div class="project__desc">
+                                    <div class="project__desc__holder">
+                                    <h1>{{ item.title|linebreaks  }}</h1>
+                                    <div class="project__desc__text">
+                                        <p>{{ item.description|linebreaks  }}</p>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects__image__slide">
+                                <div class="projects__imgs__slide owl-carousel owl-theme">
+                                    {% for image in item.images.all %}
+                                    <div class="item">
+                                        <img src="{{ image.image.url }}" alt="">
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects__tags__container">
+                        <ul class="project__tags">
+                            <li class="project__tag" style="">
+                              <div class="project__tag__name">Client</div>
+                              <div class="project__tag__value">{{ item.client_name }}</div>
+                            </li>
+                            <li class="project__tag" style="">
+                              <div class="project__tag__name">Industry</div>
+                              <div class="project__tag__value">{{ item.location }}</div>
+                            </li>
+                            <li class="project__tag" style="">
+                              <div class="project__tag__name">Sector</div>
+                              <div class="project__tag__value">{{ item.sector }}</div>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div><!-- wrapper -->
+    </section>
+{% endblock %}
+{% block scripts %}
+<script>
+    $(".show").click(function(){
+        $(".active").each(function(){
+            $(this).removeClass("active");
+        });
+        $(this).parent().addClass("active");
+        var div_id = $(this).attr("c_id");
+        $(".project__right").each(function(){
+            $(this).css({"display": "none"});
+            console.log('done')
+        });
+        $("#" + div_id).css({"display": ""});
+    });
+</script>
+{% endblock %}

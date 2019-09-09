@@ -1,0 +1,165 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    {% block ex %}
+    {% endblock %}
+  </head>
+  <header class="main__header inner__header">
+    <div class="cnst__wrapper__main">
+        <div class="display__flex space__between">
+            <div class="logo__head">
+                <a class="navbar-brand site__logo" href="{% url 'item:index' %}">
+                    <img src="{% static 'images/logo_black.png' %}" alt="">
+                </a>
+            </div>
+            <div class="head__menu__holder">
+                <ul class="list__main__menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'item:index' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'item:solutions' %}">Solutions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'item:process' %}">Process</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'item:projects' %}">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'item:about' %}">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'item:contact' %}">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+{% block content %}
+{% endblock %}
+<footer>
+    <div class="cnst__wrapper__main">
+        <div class="footer__top">
+            <div class="foot__logo">
+                <a href="#">
+                    <img src="{% static 'images/foot__logo.png' %}" alt="">
+                </a>
+            </div>
+            <div class="foot__menu">
+                <ul class="list__main__menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'item:index' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'item:solutions' %}">Solutions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'item:process' %}">Process</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'item:projects' %}">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'item:about' %}">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'item:contact' %}">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="foot__cont__footlinks">
+            <div class="foot__contact">
+                <span class="org__name">Yagya Construction Pvt.Ltd</span>
+                <span class="org__add">
+                    Baluwatar, Kathmandu, Nepal
+                </span>
+            </div>
+            <div class="foot__links__right">
+                <div class="footlinks">
+                    <ul class="pgs__links">
+                        <li>
+                            <a href="#">Story</a>
+                        </li>
+                        <li>
+                            <a href="#">Client commitment</a>
+                        </li>
+                        <li>
+                            <a href="#">Vision</a>
+                        </li>
+                        <li>
+                            <a href="#">Expertise</a>
+                        </li>
+                        <li>
+                            <a href="#">Who we are</a>
+                        </li>
+                        <li>
+                            <a href="#">Services</a>
+                        </li>
+                    </ul>
+                    <ul class="pgs__links">
+                        <li>
+                            <a href="#">M.E.S.T</a>
+                        </li>
+                        <li>
+                            <a href="#">Price quality</a>
+                        </li>
+                        <li>
+                            <a href="#">Experts</a>
+                        </li>
+                        <li>
+                            <a href="#">Clients</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="foot__prjects__links">
+                    <ul class="foot_projects__links">
+                        <li>
+                            <a href="#">Water University</a>
+                        </li>
+                        <li>
+                            <a href="#">Schneider Schaumburg</a>
+                        </li>
+                        <li>
+                            <a href="#">Administration and Meeting spaces</a>
+                        </li>
+                        <li>
+                            <a href="#">Ecolab Lobby</a>
+                        </li>
+                        <li>
+                            <a href="#">High Security Spaces & Data Centers</a>
+                        </li>
+                    </ul>
+                    <div class="careers__link">
+                        <a href="#">Careers</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy__">
+            <p>2019 Yagya Constructions. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    {% block scripts %}
+    {% endblock %}
+</body>
+</html>

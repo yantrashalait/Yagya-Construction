@@ -1,0 +1,45 @@
+{% extends 'item/base.html' %}
+{% load static %}
+{% block content %}
+    <section class="full__img__banner">
+        <div class="cnst__wrapper__main">
+            <img src= "{{ about.main_image.url }}" alt="">
+        </div>
+    </section>
+    <section class="about__top">
+        <div class="cnst__wrapper__main">
+            <div class="about__top__content">
+                <div class="about__top__left">
+                    <h1>{{ about.title|linebreaks  }}</h1>
+                    <img src="{{ about.secondary_image.url }}" alt="">
+                </div>
+                <div class="about__top__paras">
+                    <p>{{ about.description|linebreaks }}</p>
+                </div>
+            </div>            
+        </div>
+    </section>
+    <section class="about__video">
+        <div class="cnst__wrapper__main">
+            <div class="video__container">
+                <div class="video__play__box">
+                <div class="video__back__image">
+                    <a class="about__video__play" rel='external' href="{{ about.video}}">
+                        <span class="ti-control-play">
+                            <img src="{% static 'images/about__video__play.png' %}" alt="">
+                        </span>
+                    </a>
+                    <img src="{% static 'images/video__back.jpg' %}" alt="">
+                </div>
+                <div class="video__below">
+                    <div class="org__ttl">
+                        Yagya Constructions
+                    </div>
+                    <h2>{{ about.slogan }}</h2>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+    

@@ -1,0 +1,115 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.css' %}">
+    <style>
+            .home__content__holder:before{
+                background: url("{{ index.image.url }}") no-repeat center;
+            }
+        </style>
+  </head>
+
+  <body>
+    <header class="main__header">
+        <div class="cnst__wrapper__main">
+            <div class="display__flex space__between">
+                <div class="logo__head">
+                    <a class="navbar-brand site__logo" href="{% url 'item:index' %}">
+                        <img src="{% static 'images/logo.png' %}" alt="">
+                    </a>
+                </div>
+                <div class="head__menu__holder">
+                    <ul class="list__main__menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'item:index' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'item:solutions' %}">Solutions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'item:process' %}">Process</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'item:projects' %}">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'item:about' %}">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'item:contact' %}">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="home__content">
+        <div class="home__content__holder">
+            <div class="home__content__back__image"></div>
+            <div class="home__content__wrapper__main">
+                <div class="home__half__box banner__text__position">
+                    <div class="home__banner__content">
+                        <div class="banner__top__text">
+                            {{ index.slogan }}
+                        </div>
+                        <div class="banner__banner__heading">
+                            <h1>{{ index.title|linebreaks }}</h1>
+                        </div>
+                        <div class="banner__para">
+                            <p>{{ index.description|linebreaks }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="home__half__box home__boxtow__content">
+                    <div class="half__inside__half home__projectbox_holder">
+                        <div class="home__projectbox">
+                            <div class="hm__project__top">
+                                <p>{{ organization.description1 }}</p>
+                            </div>
+                            <div class="hm__project__second">
+                                <p>{{ organization.description2|linebreaks }} </p>
+                            </div>
+                            <div class="hm__linkto__projects">
+                                <a href="{% url 'item:projects' %}">View Our Projects</a>
+                            </div>
+                        </div>
+                    </div><!-- half of half -->
+                    <div class="half__inside__half home__running__projects">
+                        <div class="home__projectbox">
+                            <div class="hm_run_projects_lists">
+                                <div class="hm__projects__lists__heading">
+                                    <h2>Our Running Projects</h2>
+                                </div>
+                                <ul>
+                                    {% for item in projects %}
+                                    <li>
+                                        <div class="hm__project__desc">
+                                            <span class="icn__hmproj">+</span>
+                                            <span class="hm__project__date">{{ item.date }}</span>
+                                            <a href="{% url 'item:projects' %}">{{ item.description }}</a>
+                                        </div>                                        
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+{% extends 'item/base.html' %}
+{% load static %}
+{% block content %}
+    <section class="full__img__banner">
+        <div class="cnst__wrapper__main">
+            <img src="{{ contact.image.url }}" alt="">
+        </div>
+    </section>
+    <section class="contact__top">
+        <div class="cnst__wrapper__main">
+            <div class="contact__top__content">
+                <div class="contact__top__paras">
+                    <span class="sub__heading">Say Hello</span>
+                    <h1>For a project, as a partner or as a team.</h1>
+                    <p>We are blending physical building structures from concepts and ideas to link people and space to the solution they need to be more efficient and productive. If you’re a potential employee or want become a vendor or have a project we can discuss our journey together begins here.</p>
+                </div>
+            </div>            
+        </div>
+    </section>
+    <section class="contact__form__holder">
+        <div class="cnst__wrapper__main">
+            <div class="contact__form">
+                <form method='POST' action="">
+                    {% csrf_token %}
+                    <div class="from__half">                        
+                        <input name='first_name' class="form__input" type="text" placeholder="First Name" required>
+                    </div>
+                    <div class="from__half">                        
+                        <input name='last_name' class="form__input" type="text" placeholder="Last Name" required>
+                    </div>
+                    <div class="from__half">                        
+                        <input name='email' class="form__input" type="text" placeholder="Email Address" required>
+                    </div>
+                    <div class="from__half">                        
+                        <input name='number' class="form__input" type="text" placeholder="Phone Number" required>
+                    </div>
+                    <div class="from__half">                        
+                        <input name='address' class="form__input" type="text" placeholder="Your Address" required>
+                    </div>
+                    <div class="from__half">                        
+                        <input name='company_name' class="form__input" type="text" placeholder="Your Company's Name" required>
+                    </div>
+                    <div class="form__full">
+                        <textarea name='message' placeholder="Your message here..." required></textarea>
+                    </div>
+                    <div class="form__full">
+                        <button class="contact__submit" type="submit">
+                            <span id="contact__form__submit__picto"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 18"><path d="M0 18l21-9L0 0v7l15 2-15 2v7z"></path><path fill="none" d="M-2-3h24v24H-2V-3z"></path></svg></span>
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="map__holder__contact__info">
+        <div class="cnst__wrapper__main">
+            <div class="mp__frame">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7065.309773128106!2d85.31119581520285!3d27.697059500824444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb5137c1bf18db1ea!2sKathmandu%2044600!5e0!3m2!1sen!2snp!4v1567586903966!5m2!1sen!2snp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                <div class="cont__info__box">
+                    <div class="cont__info__head">
+                        Any request?
+                    </div>
+                    <div class="cont__info__body">
+                        <div class="cont__info__address">
+                            Maman Corp.<br/>
+                            1055 Arthur ave<br/>
+                            Elk Grove Village, IL 60007
+                        </div>
+                        <div class="cont__phone">
+                            <strong>Phone : </strong>9845236255
+                        </div>
+                        <div class="cont__email">
+                            <strong>Email : </strong>info@yagyaconstruction.com
+                        </div>
+                    </div>
+                    <div class="cont__info__foot">
+                        <div class="cont__foot__ttl">
+                            Have something to say?
+                        </div>
+                        <div class="cont__foot__text">
+                            Use the form. Leave us a message and we will contact you soon.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

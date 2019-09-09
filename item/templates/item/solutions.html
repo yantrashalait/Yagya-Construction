@@ -1,0 +1,124 @@
+{% extends 'item/base.html' %}
+{% load static %}
+{% block ex %}
+<style>
+        .soluctions__banner:after {
+            background: url("{{ solution.main_image.url }}") no-repeat center;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <section class="soluctions__banner">
+        <div class="cnst__wrapper__main">
+           <div class="soluctions__banner__content">
+               <span class="soluctions__ban__top__text">We Provide</span>
+               <h1>{{ solution.title|linebreaks }}</h1>
+           </div>
+        </div>
+    </section>
+    <section class="soluctions__second__banner">
+        <div class="cnst__wrapper__main">
+            <div class="soluctions__black__banner">
+                <div class="soluctions__blakc__content">
+                    <h2>We don’t just build spaces. We create environments.</h2>
+                    <p>We offer customized construction services and capabilities for commercial and industrial clients to help them refresh and reimagine their spaces. Whether yours is new construction, an addition, or a renovation, we’ll bring our expertise and innovation to the challenge.</p>
+                </div>
+            </div>
+            <div class="below__soluctions__black__box">
+                <div class="soluctions__below__heading">
+                    <h2>We don’t just build spaces. We create environments.</h2>
+                </div>
+                <div class="soluctions__below__para">
+                    <p>We know emergencies don’t happen when it’s convenient, so we offer 24/7 service staff to handle the unexpected at your site. With our team, you’re covered for fast response and recovery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="soluctions__descriptions">
+        <div class="cnst__wrapper__main">
+            <div class="soluctions__descriptions__holder">
+            <div class="half__box">
+                <div class="soluctions__desc__img">
+                    <img src="{% static 'images/soluctions__desc.png' %}" alt="">
+                </div>
+            </div>
+            <div class="half__box">
+                <div class="soluctions__desc__text">
+                    <div class="soluctions__desc_heading">
+                        <h2>We don’t just build spaces. We create environments.</h2>
+                    </div>
+                    <div class="soluctions__desc_para">
+                        <p>Let’s face it—the work we do with clients isn’t just about the walls. It’s about everything that happens within them: productivity, innovation, breakthroughs, and progress. That’s why we work with each and every client to create spaces keyed to business needs.</p>
+                        <p>We combine our knowledge of technology and trends with our construction expertise to build what’s next for you—and to ensure it performs. </p>
+                    </div>    
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="experties__">
+        <div class="cnst__wrapper__main">
+            <div class="experties__container">
+                <div class="experties__heading">
+                    <div class="heading__wrapper">
+                        <h2>Our In-house Experties</h2>
+                        <p>With experties on the team, we can offer creative and complete construction solutions.</p>
+                    </div>
+                </div>
+                
+                <div class="experties__lists__holder">
+                        {% for service in service %}
+                    <div class="experties__lists">
+                            
+                        <div class="experties__list__content">
+                                
+                            <div class="experties__icon">
+                                <img src="{{ service.icon.url }}" alt="">
+                            </div>
+                            <div class="experties__texts">
+                                <h3>{{ service.title }}</h3>
+                                <p>{{ service.description }}</p>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    {% endfor %}
+                    <!-- <div class="experties__lists">
+                        <div class="experties__list__content">
+                            <div class="experties__icon">
+                                <img src="{% static 'images/expt01.png' %}" alt="">
+                            </div>
+                            <div class="experties__texts">
+                                <h3>Project Management</h3>
+                                <p>The art and science of making things happen</p>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="experties__lists">
+                        <div class="experties__list__content">
+                            <div class="experties__icon">
+                                <img src="{% static 'images/expt01.png' %}" alt="">
+                            </div>
+                            <div class="experties__texts">
+                                <h3>Project Management</h3>
+                                <p>The art and science of making things happen</p>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="experties__lists">
+                        <div class="experties__list__content">
+                            <div class="experties__icon">
+                                <img src="{% static 'images/expt01.png' %}" alt="">
+                            </div>
+                            <div class="experties__texts">
+                                <h3>Project Management</h3>
+                                <p>The art and science of making things happen</p>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                
+            </div>
+        </div>
+    </section>
+{% endblock %}
