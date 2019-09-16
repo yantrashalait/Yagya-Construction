@@ -36,24 +36,27 @@
     </section>
     <section class="soluctions__descriptions">
         <div class="cnst__wrapper__main">
+                {% for solution_provide in solution_provide %}
             <div class="soluctions__descriptions__holder">
             <div class="half__box">
                 <div class="soluctions__desc__img">
-                    <img src="{% static 'images/soluctions__desc.png' %}" alt="">
+                    <img src="{{ solution_provide.image.url }}" alt="">
                 </div>
             </div>
             <div class="half__box">
                 <div class="soluctions__desc__text">
+                    
                     <div class="soluctions__desc_heading">
-                        <h2>We don’t just build spaces. We create environments.</h2>
-                    </div>
+                        <h2>{{ solution_provide.solution_name }}</h2>
+                    </div> 
                     <div class="soluctions__desc_para">
-                        <p>Let’s face it—the work we do with clients isn’t just about the walls. It’s about everything that happens within them: productivity, innovation, breakthroughs, and progress. That’s why we work with each and every client to create spaces keyed to business needs.</p>
-                        <p>We combine our knowledge of technology and trends with our construction expertise to build what’s next for you—and to ensure it performs. </p>
+                        <p>{{ solution_provide.description|linebreaks }}</p>
                     </div>    
                 </div>
+                
             </div>
             </div>
+            {% endfor %}
         </div>
     </section>
     <section class="experties__">

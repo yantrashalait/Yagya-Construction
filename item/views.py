@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django.views.generic import TemplateView
-from . models import HomepageImage, ProcessPage, AboutUs, ContactDetail, Organization, ProcessStep, Message, SolutionPage, Service, Project, ProjectImage, ProjectOverView
+from . models import HomepageImage, ProcessPage, AboutUs, ContactDetail, Organization, ProcessStep, Message, SolutionPage, Service, Project, ProjectImage, ProjectOverView, SolutionWeProvide
 from . forms import ContactForm
 # Create your views here.
 
@@ -71,4 +71,5 @@ class SolutionView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['solution'] = SolutionPage.objects.first() 
         context['service'] = Service.objects.all()
+        context['solution_provide'] = SolutionWeProvide.objects.all()
         return context
