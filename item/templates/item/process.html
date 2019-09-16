@@ -30,8 +30,8 @@
                 <div class="process__steps__list">
                     <div class="process__text__box">
                         <div class="process__step__index">{{ forloop.counter }}</div>
-                        <h2>{{ process_down.title|linebreaks }}</h2>
-                        <div class="process__step__body">{{ process_down.description|linebreaks }}</div>
+                        <h2>{{ process_down.step_name|linebreaks }}</h2>
+                        <div class="process__step__body">{{ process_down.step_description|linebreaks }}</div>
                     </div>
                     <div class="process__step__image">
                         <img src="{{ process_down.image.url }}" alt="">

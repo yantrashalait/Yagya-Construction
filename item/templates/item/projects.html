@@ -28,9 +28,9 @@
                         <div class="projects__left">
                             <div class="project__desc">
                                 <div class="project__desc__holder">
-                                <h1>{{ item.title|linebreaks }}</h1>
+                                <h1>{{ item.project_name|linebreaks }}</h1>
                                 <div class="project__desc__text">
-                                    <p>{{ item.description|linebreaks  }}</p>
+                                    <p>{{ item.project_description|linebreaks  }}</p>
                                 </div>
                                 </div>
                             </div>
@@ -52,7 +52,7 @@
 		                  <div class="project__tag__value">{{ item.client_name }}</div>
 		                </li>
 		                <li class="project__tag" style="">
-		                  <div class="project__tag__name">Industry</div>
+		                  <div class="project__tag__name">Location</div>
 		                  <div class="project__tag__value">{{ item.location }}</div>
 		                </li>
 		                <li class="project__tag" style="">
@@ -68,9 +68,9 @@
                             <div class="projects__left">
                                 <div class="project__desc">
                                     <div class="project__desc__holder">
-                                    <h1>{{ item.title|linebreaks  }}</h1>
+                                    <h1>{{ item.project_name|linebreaks  }}</h1>
                                     <div class="project__desc__text">
-                                        <p>{{ item.description|linebreaks  }}</p>
+                                        <p>{{ item.project_description|linebreaks  }}</p>
                                     </div>
                                     </div>
                                 </div>
@@ -92,7 +92,7 @@
                               <div class="project__tag__value">{{ item.client_name }}</div>
                             </li>
                             <li class="project__tag" style="">
-                              <div class="project__tag__name">Industry</div>
+                              <div class="project__tag__name">Location</div>
                               <div class="project__tag__value">{{ item.location }}</div>
                             </li>
                             <li class="project__tag" style="">
