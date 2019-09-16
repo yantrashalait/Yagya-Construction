@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django.views.generic import TemplateView
-from . models import HomepageImage, ProcessPage, AboutUs, ContactDetail, Organization, ProcessStep, Message, SolutionPage, Service, Project, ProjectImage
+from . models import HomepageImage, ProcessPage, AboutUs, ContactDetail, Organization, ProcessStep, Message, SolutionPage, Service, Project, ProjectImage, ProjectOverView
 from . forms import ContactForm
 # Create your views here.
 
@@ -44,6 +44,7 @@ class IndexView(TemplateView):
         context['index'] = HomepageImage.objects.first() 
         context['organization'] = Organization.objects.first() 
         context['projects'] = Project.objects.filter(project_status=2)
+        context['project_overview'] = ProjectOverView.objects.first()
         return context
 
 class AboutView(TemplateView):

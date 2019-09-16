@@ -60,13 +60,13 @@
                 <div class="home__half__box banner__text__position">
                     <div class="home__banner__content">
                         <div class="banner__top__text">
-                            {{ index.slogan }}
+                            {{ organization.company_slogan }}
                         </div>
                         <div class="banner__banner__heading">
-                            <h1>{{ index.title|linebreaks }}</h1>
+                            <h1>{{ organization.organization_heading|linebreaks }}</h1>
                         </div>
                         <div class="banner__para">
-                            <p>{{ index.description|linebreaks }}</p>
+                            <p>{{ organization.description|linebreaks }}</p>
                         </div>
                     </div>
                 </div>
@@ -74,10 +74,10 @@
                     <div class="half__inside__half home__projectbox_holder">
                         <div class="home__projectbox">
                             <div class="hm__project__top">
-                                <p>{{ organization.description1 }}</p>
+                                <p>{{ project_overview.heading }}</p>
                             </div>
                             <div class="hm__project__second">
-                                <p>{{ organization.description2|linebreaks }} </p>
+                                <p>{{ project_overview.description|linebreaks }} </p>
                             </div>
                             <div class="hm__linkto__projects">
                                 <a href="{% url 'item:projects' %}">View Our Projects</a>

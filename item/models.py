@@ -10,9 +10,9 @@ class Organization(models.Model):
     organization_address = models.CharField(max_length=100, null=True, blank=True)
     phone_number = models.CharField(max_length=20, null=True, blank=True)
     email = models.EmailField(max_length=100, null=True, blank=True)
-    description1 = models.TextField()
-    description2 = models.TextField()
-    company_slogan = models.CharField(max_length=100, null=True, blank=True)
+    organization_heading = models.TextField()
+    description = models.TextField()
+    company_slogan = models.CharField(max_length=500, null=True, blank=True) 
 
 class SolutionPage(models.Model):
     main_image = models.ImageField(upload_to='solution/', help_text="Image size: width=193px height=115px")
@@ -98,3 +98,7 @@ class SolutionWeProvide(models.Model):
     solution_name = models.TextField()
     description = models.TextField()
     image = models.ImageField(upload_to='solution/')
+
+class ProjectOverView(models.Model):
+    heading = models.TextField()
+    description = models.TextField()
