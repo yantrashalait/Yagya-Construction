@@ -53,6 +53,7 @@ class AboutView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['about'] = AboutUs.objects.first() 
+        context['organization'] = Organization.objects.first() 
         return context
 
 class ProcessView(TemplateView):

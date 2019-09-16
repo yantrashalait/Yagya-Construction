@@ -17,6 +17,8 @@ class Organization(models.Model):
 class SolutionPage(models.Model):
     main_image = models.ImageField(upload_to='solution/', help_text="Image size: width=193px height=115px")
     title = models.TextField(null=True, blank=True)
+    heading = models.TextField(null=True, blank=True)
+    description = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return self.title
