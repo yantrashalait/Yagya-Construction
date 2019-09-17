@@ -63,15 +63,14 @@
                     </div>
                     <div class="cont__info__body">
                         <div class="cont__info__address">
-                            Maman Corp.<br/>
-                            1055 Arthur ave<br/>
-                            Elk Grove Village, IL 60007
+                             {{ organization.organization_name }}<br/>
+                            {{ organization.organization_address }}
                         </div>
                         <div class="cont__phone">
-                            <strong>Phone : </strong>9845236255
+                            <strong>Phone : </strong>{{ organization.phone_number }}
                         </div>
                         <div class="cont__email">
-                            <strong>Email : </strong>info@yagyaconstruction.com
+                            <strong>Email : </strong>{{ organization.email }}
                         </div>
                     </div>
                     <div class="cont__info__foot">
