@@ -24,7 +24,7 @@
             <div class="video__container">
                 <div class="video__play__box">
                 <div class="video__back__image">
-                    <a class="about__video__play" rel='external' href="{{ about.video}}">
+                    <a class="about__video__play" rel='external' href='{{ about.video_url }}'>
                         <span class="ti-control-play">
                             <img src="{% static 'images/about__video__play.png' %}" alt="">
                         </span>
@@ -42,4 +42,3 @@
         </div>
     </section>
 {% endblock %}
-    
