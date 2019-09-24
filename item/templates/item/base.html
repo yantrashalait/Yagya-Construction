@@ -93,34 +93,22 @@
         </div>
         <div class="foot__cont__footlinks">
             <div class="foot__contact">
-                <span class="org__name">Yagya Construction Pvt.Ltd</span>
+                <span class="org__name">{{ organization.organization_name }}</span>
                 <span class="org__add">
-                    Baluwatar, Kathmandu, Nepal
+                    {{ organization.organization_address }}
                 </span>
             </div>
             <div class="foot__links__right">
                 <div class="footlinks">
                     <ul class="pgs__links">
                         <li>
-                            <a href="#">Story</a>
+                            <a href="{% url 'item:about' %}">Who we are</a>
                         </li>
                         <li>
-                            <a href="#">Client commitment</a>
-                        </li>
-                        <li>
-                            <a href="#">Vision</a>
-                        </li>
-                        <li>
-                            <a href="#">Expertise</a>
-                        </li>
-                        <li>
-                            <a href="#">Who we are</a>
-                        </li>
-                        <li>
-                            <a href="#">Services</a>
+                            <a href="{% url 'item:solutions' %}">Services</a>
                         </li>
                     </ul>
-                    <ul class="pgs__links">
+                    <!-- <ul class="pgs__links">
                         <li>
                             <a href="#">M.E.S.T</a>
                         </li>
@@ -133,14 +121,23 @@
                         <li>
                             <a href="#">Clients</a>
                         </li>
-                    </ul>
-                </div>
-                <div class="foot__prjects__links">
+                    </ul> -->
                     <ul class="foot_projects__links">
+                            {% for item in project %}
+                            <li>
+                                <a href="{% url 'item:projects' %}">{{ item.project_name }}</a>
+                            </li>
+                            {% endfor %}
+                            </ul>
+                </div>
+                <!-- <div class="foot__prjects__links">
+                    <ul class="foot_projects__links">
+                        {% for item in project %}
                         <li>
-                            <a href="#">Water University</a>
+                            <a href="#">{{ item.project_name }}</a>
                         </li>
-                        <li>
+                        {% endfor %} -->
+                        <!-- <li>
                             <a href="#">Schneider Schaumburg</a>
                         </li>
                         <li>
@@ -151,12 +148,12 @@
                         </li>
                         <li>
                             <a href="#">High Security Spaces & Data Centers</a>
-                        </li>
-                    </ul>
-                    <div class="careers__link">
+                        </li> -->
+                    <!-- </ul> -->
+                    <!-- <div class="careers__link">
                         <a href="#">Careers</a>
-                    </div>
-                </div>
+                    </div> -->
+                <!-- </div> -->
             </div>
         </div>
         <div class="copy__">
