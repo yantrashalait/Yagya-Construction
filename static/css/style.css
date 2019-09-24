@@ -76,7 +76,7 @@ header.main__header {
     position: fixed;    
     padding: 20px 0 0 0;
     width: 100%;
-    z-index: 9;
+    z-index: 99;
 }
 
 .list__main__menu{
@@ -239,7 +239,7 @@ header.main__header {
 
 .hm__projects__lists__heading h2{
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 15px;    width: 100%;
 }
 
 .running_projects_lists{
@@ -260,6 +260,7 @@ display: flex;
 }
 .hm_run_projects_lists ul li {
         display: inline-flex;
+        width: 100%;
 }
 .hm__project__desc .hm__project__date{
     display: block;
@@ -395,6 +396,7 @@ display: flex;
 .soluctions__descriptions__holder {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .soluctions__desc__img img{
@@ -814,12 +816,12 @@ section.process__heading:before{
 }
 
 .contact__form textarea{
-    max-width: 91.8%;
-    width: 91.8%;
+    max-width: 92.8%;
+    width: 92.8%;
     max-height: 250px;
     height: 250px;
     border: 1px solid #e6e6e6;
-    padding: 40px 0 0 50px;
+    padding: 5% 0 0 5%;
 }
 #contact__form__submit__picto {
     display: inline-block;
@@ -1044,6 +1046,71 @@ li.project__tag {
 }
 /* projects page css */
 
+
+/* css for menu */
+
+.head__menu__holder{
+    display: flex;
+    align-items: center;
+}
+
+.menu__icn{
+    cursor: pointer;
+    display: none;
+}
+.menu__bar{
+    position: relative;
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    display: inline-flex;
+}
+
+.menu__bar:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    top: -7px;
+}
+
+.menu__bar:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    bottom: -7px;
+}
+
+.menu__close__btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ffcc00;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__header.inner__header .menu__bar, .main__header.inner__header .menu__bar:before,.main__header.inner__header .menu__bar:after{
+    background: #24272a;
+}
+
+
+.main__header.inner__header.sticky__header .menu__bar, .main__header.inner__header.sticky__header .menu__bar:before,.main__header.inner__header.sticky__header .menu__bar:after{
+    background: #fff;
+}
+
+
+.projects__image__slide img{
+    width: 100%;
+}
+/* css for menu */
 
 
 

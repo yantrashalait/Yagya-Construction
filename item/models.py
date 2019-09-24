@@ -75,6 +75,7 @@ class AboutUs(models.Model):
     title = models.TextField(null=True, blank=True)
     main_image = models.ImageField(upload_to='about/', help_text="Image size: width: 1422px height: 711px")
     secondary_image = models.ImageField(upload_to='about/', help_text="Image size: width=585px height=342px")
+    thumbnail_image = models.ImageField(upload_to='thumbnail/', help_text="Image size: width=840px height=558px")
     video_url = models.URLField(help_text="Please enter the url of the video from youtube or other sources")
     title = models.CharField(max_length=100, null=True, blank=True)
     description = models.TextField(null=True, blank=True)

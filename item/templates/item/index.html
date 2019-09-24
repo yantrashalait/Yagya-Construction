@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.css' %}">
     <style>
@@ -29,7 +29,13 @@
                     </a>
                 </div>
                 <div class="head__menu__holder">
+                    <div class="menu__icn">
+                        <span class="menu__bar"></span>
+                    </div>
                     <ul class="list__main__menu">
+                        <span class="menu__close__btn">
+                            X
+                        </span>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'item:index' %}">Home</a>
                         </li>
@@ -96,7 +102,7 @@
                                         <div class="hm__project__desc">
                                             <span class="icn__hmproj">+</span>
                                             <span class="hm__project__date">{{ item.date }}</span>
-                                            <a href="{% url 'item:projects' %}">{{ item.project_description }}</a>
+                                            <a href="{% url 'item:projects' %}">{{ item.project_name }}</a>
                                         </div>                                        
                                     </li>
                                     {% endfor %}
@@ -109,6 +115,7 @@
         </div>
     </section>
     <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.js' %}"></script>
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
   </body>

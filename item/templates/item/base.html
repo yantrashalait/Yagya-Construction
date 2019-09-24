@@ -23,9 +23,18 @@
                 <a class="navbar-brand site__logo" href="{% url 'item:index' %}">
                     <img src="{% static 'images/logo_black.png' %}" alt="">
                 </a>
+                <a class="navbar-brand site__logo scroll__logo" href="{% url 'item:index' %}">
+                    <img src="{% static 'images/logo.png' %}" alt="">
+                </a>
             </div>
             <div class="head__menu__holder">
+                <div class="menu__icn">
+                    <span class="menu__bar"></span>
+                </div>
                 <ul class="list__main__menu">
+                    <span class="menu__close__btn">
+                        X
+                    </span>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'item:index' %}">Home</a>
                     </li>

@@ -1,4 +1,3 @@
-
 /*! Magnific Popup - v1.1.0 - 2016-02-20
 * http://dimsemenov.com/plugins/magnific-popup/
 * Copyright (c) 2016 Dmitry Semenov; */
@@ -1136,7 +1135,7 @@
 							'<div class="mfp-img"></div>'+
 							'<figcaption>'+
 								'<div class="mfp-bottom-bar">'+
-									'<div class="mfp-title"></div>'+
+									
 									'<div class="mfp-counter"></div>'+
 								'</div>'+
 							'</figcaption>'+
@@ -1518,7 +1517,9 @@
 	
 	
 				/*
+	
 				Animating left + top + width/height looks glitchy in Firefox, but perfect in Chrome. And vice-versa.
+	
 				 */
 				var obj = {
 					width: el.width(),

@@ -1,3 +1,365 @@
-@media screen and (max-width: 1024px){
+.main__header{
+	transition: all 0.5s ease;
 }
 
+.main__header.sticky__header{
+	position: fixed;
+    width: 100%;
+    padding: 0;
+    background: #24272a;
+}
+
+.inner__header .site__logo.scroll__logo{
+display: none;
+}
+
+.inner__header.sticky__header .site__logo.scroll__logo{
+display: block;
+}
+.inner__header.sticky__header .site__logo{
+	display: none;
+}
+.inner__header.sticky__header .list__main__menu .nav-item a{
+	color: #fff;
+}
+
+@media screen and (max-width: 1400px){
+	.hm__linkto__projects a {
+	    padding: 12px 20px;
+	    font-size: 12px;
+	}
+	.banner__banner__heading h1 {
+	    font-size: 3rem;
+	}
+	.banner__para p {
+	    font-size: 14px;
+	}
+	.cnst__wrapper__main, .home__content__wrapper__main {
+    	width: 85%;
+    }
+    .hm__projects__lists__heading h2 {
+        font-size: 14px;
+    }
+    .home__projectbox {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 1200px){
+	.cnst__wrapper__main, .home__content__wrapper__main {
+    	width: 97%;
+	}
+}
+
+
+@media screen and (max-width: 1024px){
+	.cnst__wrapper__main, .home__content__wrapper__main {
+    	width: 93%;
+	}
+
+	.about__top__content {
+	    padding: 10% 0 0 0;
+	    flex-wrap: wrap;
+	}
+	.about__top__left h1{
+		padding: 0 0 10% 0;
+	}
+	.about__top__left, .about__top__paras{
+		width: 100%;
+	}
+	.about__top__paras{
+		padding: 10% 0 0 0;
+	}
+	.video__play__box {
+	    max-width: 100%;
+	    width: 100%;
+	}
+	.video__back__image img{
+		width: 100%;
+	}
+
+	.video__below {
+    	flex-wrap: wrap;
+	}
+	.org__ttl {
+	    margin: 0 0 10% 0;
+	}
+	.video__below h2{
+		width: 100%;
+		max-width: 100%;
+	}
+
+	header.main__header {
+	    overflow: hidden;
+	}
+	.site__logo img {
+    	width: 50px;
+	}
+	.contact__top__paras {
+    	width: 80%;
+	}
+	.from__half {
+	    max-width: 100%;
+	    width: 100%;
+	}
+	.contact__form textarea {
+	    max-width: 97.6%;
+	    width: 97.6%;
+	    padding: 3% 0 0 2%;
+	}
+	.cont__info__box{
+		position: inherit;
+	}
+	.list__main__menu .nav-item a {
+    	padding: 0 10px;	
+	}
+	.foot__menu .list__main__menu .nav-item a {
+	    margin: 0 0 0 1.8rem;
+	}
+	.projects__tags__container{
+		margin: 70px 0 0 0;
+	}
+	.project__desc__holder h1 {
+	    font-size: 2rem;
+	}
+	.projects__nav__links {
+    width: 10%;
+    max-width: 10%;
+	}
+	.soluctions__black__banner {
+    	max-width: 100%;
+	}
+	.soluctions__blakc__content:before{
+		display: none;
+	}
+	.experties__lists {
+	    flex: 0 0 100%;
+	    max-width: 100%;
+	    display: flex;
+	}
+}
+
+
+@media screen and (max-width: 992px){
+	.home__half__box {
+	    max-width: 100%;
+	    -ms-flex: 0 0 100%;
+	    flex: 0 0 100%;
+	}
+	.home__content__wrapper__main {
+	    width: 75%;
+	    flex-wrap: wrap;
+	}
+	.home__content__holder {
+	    height: auto;
+	    padding-top: 130px;
+	}
+	.home__half__box.home__boxtow__content{
+	}
+	.home__projectbox_holder .home__projectbox, .home__running__projects .home__projectbox{
+		padding-left: 0;
+	}
+
+	.home__projectbox_holder {
+    	margin: 20% 0 0 0;
+	}
+	.home__content__holder:before {
+	    height: 50%;
+	    top: 0;
+	    right: 0;
+	}
+	.success__content__wrapper {
+	    padding-left: 0;
+	}
+}
+
+
+@media screen and (max-width: 768px){
+
+	.menu__close__btn{
+		display: flex;
+	}
+	.home__half__box.home__boxtow__content {
+	    width: 100%;
+	    flex-wrap: wrap;
+	}
+	.half__inside__half {
+	    max-width: 100%;
+	    -ms-flex: 0 0 100%;
+	    flex: 0 0 100%;
+	}
+	.home__projectbox_holder {
+	    width: 100%;
+	}
+
+	.menu__icn{
+	    display: flex;
+	    height: 25px;
+	    width: 25px;
+	    align-items: center;
+	}
+
+	.main__header .list__main__menu{
+		display: none;
+		position: fixed;
+	    width: 100%;
+	    height: 100%;
+	    left: 0;
+	    top: 0;
+	    background: #24272a;
+	    padding: 20% 0 0 0;
+	    z-index: 99;
+	}
+
+	.main__header .list__main__menu .nav-item {
+	    width: 100%;
+	    justify-content: center;
+	    height: auto;    
+	    padding: 10px 0;
+	}
+
+	.main__header .list__main__menu .nav-item a {
+	    font-size: 1.5rem;
+	    color: #fff;
+	}
+
+	.foot__menu{
+		display: none;
+	}
+
+	.foot__cont__footlinks {
+	    flex-wrap: wrap;
+	}
+
+	.foot__contact, .foot__links__right{
+		width: 100%;
+	    max-width: 100%;
+	    margin: 0 0 10% 0;
+	    flex-wrap: wrap;
+	}
+	.contact__form {
+	    width: 90%;
+	}
+	.projects__image__slide {
+	    display: inline-flex;
+	    order: 1;    
+	    width: 100%;
+	    max-width: 100%;
+	}
+	.projects__left {
+	    order: 2;
+	}
+	.projects__cont {
+	    flex-wrap: wrap;
+	}
+	.project__desc__holder {
+    	margin: 10% 0 0 10%;
+	}
+	.project__desc__holder {
+    	margin: 10% 0 0 10%;
+	}
+	ul.project__tags {
+    	width: 90%;
+	}
+	.projects__tags__container {
+    	margin: 70px 0 0 10%;
+	}
+	.projects__nav {
+	    align-items: flex-end;
+	}
+	.soluctions__desc_heading h2 {
+	    max-width: 100%;
+    }
+    .soluctions__below__heading h2{
+    	padding: 0;
+    }
+
+    .soluctions__below__para p {
+    	padding: 5% 0 0 0;
+	}
+	.below__soluctions__black__box {
+    	padding: 10% 0;
+	}
+	.soluctions__below__para {
+	    max-width: 100%;
+	}
+	.soluctions__black__banner {
+    	margin-left: 0;
+	}
+	.soluctions__blakc__content {
+    	padding: 10% 10%;
+	}
+	section.experties__ {
+    	padding: 0;
+	}
+	.experties__container {
+    	padding: 0;
+	}
+	
+}
+
+@media screen and (max-width: 660px){
+	.footlinks, .foot__prjects__links{
+		width: 100%;
+	    max-width: 100%;
+	    margin: 0 0 10% 0;
+	}
+	.process__steps__list{
+		display: inline-flex;
+		flex-wrap: wrap;
+		margin: 0 0 6rem 0;
+	}
+	.process__steps__list:nth-child(even) .process__text__box{
+		order:1;
+	}
+	.process__steps__list:nth-child(even) .process__step__image{
+		order:2;
+		text-align: left;
+	}
+
+	.process__step__image img{
+		max-width: 100%;
+	}
+
+	.process__steps__list .process__text__box, .process__steps__list .process__step__image{
+		width: 100%;
+	}
+	.process__steps__list .process__step__image{
+		margin: 10% 0 0 12%;	
+	}
+	.experties__heading {
+	    flex: 0 0 100%;
+	    max-width: 100%;
+	    flex-wrap: wrap;
+	    padding: 0 0 5% 0;
+	}
+	.experties__lists__holder {
+	    flex: 0 0 100%;
+	    max-width: 100%;
+	}
+	.half__box {
+	    max-width: 100%;
+	}
+	.soluctions__desc_para p {
+	    padding: 0 0 10% 0;
+	}
+	.soluctions__desc_heading h2 {
+	    margin: 10% 0 7% 0;
+	}
+	.experties__container {
+	    padding: 0 0 0 0;
+	    margin: 0 0 10% 0;
+	}
+	.soluctions__desc__text {
+    	padding: 0;
+	}
+	.soluctions__below__heading {
+        max-width: 100%;
+	}
+	.below__soluctions__black__box {
+	    margin: 0;
+	    width: 100%;
+	    max-width: 100%;
+	}
+}
