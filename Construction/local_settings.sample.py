@@ -20,7 +20,7 @@ DATABASES = {
 }
 
 from .settings import INSTALLED_APPS
-INSTALLED_APPS +=['item']
+INSTALLED_APPS +=['item', 'solutions_page', 'process_page', 'project_page', 'aboutus_page', 'contact_page']
 
 
 SEND_ACTIVATION_EMAIL = True
