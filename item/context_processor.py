@@ -1,4 +1,5 @@
-from .models import Project, Organization
+from aboutus_page.models import Organization
+from project_page.models import Project
 
 def footer_processor(request):
     project = Project.objects.all()

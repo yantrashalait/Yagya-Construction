@@ -1,8 +1,14 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django.views.generic import TemplateView
-from . models import HomepageImage, ProcessPage, AboutUs, ContactDetail, Organization, ProcessStep, Message, SolutionPage, Service, Project, ProjectImage, ProjectOverView, SolutionWeProvide
+from . models import HomepageImage
 from . forms import ContactForm
+
+from solutions_page.models import SolutionWeProvide, SolutionPage, Service
+from process_page.models import ProcessStep, ProcessPage
+from project_page.models import Project, ProjectOverView, ProjectImage
+from aboutus_page.models import Organization, AboutUs
+from contact_page.models import ContactDetail, Message
 # Create your views here.
 
 class ContactView(TemplateView):
